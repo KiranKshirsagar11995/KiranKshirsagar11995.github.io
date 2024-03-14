@@ -1,0 +1,15 @@
+
+.text-white{
+    font-size: large;
+}
+.footer {
+    position:static;
+    bottom: 0;
+    width: 100%;
+    /* background: linear-gradient(40deg,#ff6ec4,#7873f5); */
+    background-image: linear-gradient(to top,#0e4966 0, #070608 100%);
+
+    /* background: linear-gradient(40deg,#7873f5,#ff6ec4); */
+        color: white; /* Set your desired text color */
+    padding: 15px; /* Adjust the padding as needed */
+  }

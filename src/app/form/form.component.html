@@ -1,0 +1,221 @@
+<div class="heading">
+    <img src="./assets/logomkkv.png" alt="About 1" width="200" height="150">
+    <div class="text-container">
+        <h1>महिला व्यवसाय शिक्षण बहुउद्देशीय संस्था,अकोला</h1>
+
+        <h3>( गांव तिथे महिला शिक्षण योजना अंतर्गत )</h3>
+        <h6>(Reg.no. MAH/479/2016/AKOLA/F-19199)</h6>
+
+    </div>
+
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <p class="paragraph">Employment, Promotion and Employment Training रोजगार,प्रोत्साहन आणि रोजगार
+                प्रशिक्षण : -</p>
+
+            <hr>
+            <br><br>
+            <ul class="content">
+                <li>
+                    भारत सरकार Certificate(Diploma).
+                </li>
+                <li>
+                    Certificate ची नोंद एम्प्लॉयमेंट ऑफीसमध्ये करुन नोकरी व शासकीय सवलती प्राप्त करु शकतात. </li>
+                <li>
+                    भारत सरकार जाती व योजना निहाय कर्ज उपलब्ध करु शकतात. </li>
+                <li>
+                    भारत सरकार आणि महाराष्ट्र सरकारचे रोजगार प्रमाणपत्र वैध आहे. </li>
+                <li>
+                    महिला व्यवसाय प्रशिक्षण अभियानामध्ये संपूर्ण महाराष्ट्रात नोकरी उपलब्ध.
+                </li>
+                <li>
+                    प्रशिक्षण समाप्तीनंतर रु.१०००/- विद्यावेतन (योजनानिहाय)
+
+                </li>
+                <li>
+                    पाळणाघर, महिला कार्यशाळा लाभार्थी सुरु करु शकतात </li>
+
+                <li>
+                    25000 प्रशिक्षित बेरोजगार महिलांना रोजगार.
+                </li>
+                <li>
+                    सुशिक्षित बेरोजगर महिलान्ना रोजगार, व्यवसाय प्रशिक्षण,आर्थिक सहाय्यक मार्गदर्शन.
+                </li>
+            </ul>
+
+        </div>
+        <div class="form col-4">
+            <br><br><br><br>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-outline ">
+                    <h4 class="rounded-pill">LOGIN / REGISTER</h4><br>
+                    <input type="text" id="form2Example11" class="form-control"
+                        placeholder="Phone number or email address" formControlName="mobileNumber" />
+                    <label class="form-label" for="form2Example11"></label>
+
+                </div>
+
+                <div class="form-outline ">
+                    <input type="password" id="form2Example22" class="form-control" placeholder="Password"
+                        formControlName="password" />
+                    <label class="form-label" for="form2Example22"></label>
+
+                </div>
+
+                <div>
+                    <button class="btn btn-outline-danger" type="submit" [disabled]="loginForm.invalid">Log
+                        In</button>
+                    <!-- <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log -->
+                    <div class="d-flex align-items-center justify-content-center pb-4">
+                        <p class="mb-0 me-2 " style="color: #fff;">Don't have an account?</p>
+                        <button type="button" class="btn btn-outline-danger" routerLink="/app-registration-form">Create
+                            new</button>
+                        <!-- <a class="nav-link" routerLink="/registration-form">ABOUT</a> -->
+
+                    </div>
+                </div>
+
+
+            </form>
+
+
+        </div>
+    </div>
+
+
+
+
+    <p class="paragraph">Kicking Benefits </p>
+    <hr>
+    <div class="row">
+        <div class="col-8">
+
+            <br><br>
+            <ul class="content1">
+                <li>
+                    Government of India certified certificate
+                </li>
+                <li>
+                    Can get job and government benefits by registering the certificate in employment office.
+                </li>
+                <li>
+                    Govt of India will provide caste and scheme wise loans
+                </li>
+                <li>
+                    Certificate for Govt of India and Govt of Maharashtra jobs
+                </li>
+                <li>
+                    Jobs available across Maharashtra in Women Business Training Mission.
+                </li>
+                <li>
+                    After completion of training Rs. 1000/- Scholarship (Scheme) </li>
+                <li>
+                    Beneficiaries can start nurseries, women's workshops </li>
+                <li>
+                    Can start own business. </li>
+            </ul>
+
+        </div>
+        <div class="col-4">
+
+            <div class="row py-5">
+
+
+                <img class="rounded" loading="lazy" src="./assets/women.jpg" alt="About 1">
+
+            </div>
+        </div>
+    </div>
+
+
+    <p class="paragraph">Necessary documents required for training </p>
+    <hr>
+    <div class="row">
+        <div class="col-8">
+            <br><br>
+
+            <ul>
+                <li>
+                    School Certificate (TC)
+                </li>
+                <li>
+                    Aadhaar Card Xerox </li>
+                <li>
+                    Passport photo 2 nos. </li>
+
+            </ul>
+
+        </div>
+        <!-- <div class="col-4">
+
+                <div class="row justify-content-xl-center">
+                    <div class="col-12 col-xl-11">
+
+                        <img class="rounded" loading="lazy" src="./assets/women.jpg" alt="About 1" width="500px"
+                            height="400px">
+                    </div>
+                </div>
+            </div> -->
+    </div>
+
+
+
+
+    <p class="paragraph">Training charges / शुल्क आकारणी</p>
+    <hr>
+
+    <table class="table ">
+        <thead class="table-dark">
+            <tr>
+                <td scope="col">Sr.No</td>
+                <td scope="col">Training Fee</td>
+                <td scope="col">For 6 Months</td>
+                <td scope="col">For 1 Year</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">1</td>
+                <td> Monthly training fee</td>
+                <td>1800</td>
+                <td>3800</td>
+            </tr>
+            <tr>
+                <td scope="row">2</td>
+                <td>entrance fees</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td scope="row">3</td>
+                <td>Examination Fee</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td scope="row">4</td>
+                <td>Self Employed Courses, Books Fees
+                </td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td scope="row">5</td>
+                <td>Admission application and information booklet fee </td>
+                <td>50</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td scope="row">6</td>
+                <td>Total Fee</td>
+                <td>2150</td>
+                <td>4150</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</div>

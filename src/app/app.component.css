@@ -1,0 +1,16 @@
+nav {
+    position: static;
+    font-family: quicksand, sans-serif;
+    font-size: 18px;
+    /* background-color:  rgba(0, 0, 0, 0.2); */
+    background: linear-gradient(40deg,#ff6ec4,#7873f5);
+    /* background: linear-gradient(40deg,#45cafc,#303f9f) */
+   
+}
+
+.nav-link{
+    color: #fff
+}
+.nav a:hover {
+    color: rgb(245, 101, 17);
+}

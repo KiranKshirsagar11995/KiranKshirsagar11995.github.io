@@ -1,0 +1,27 @@
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+.sideimg{
+    background-color: rgba(95, 6, 119, 0.349);
+    border-top-left-radius: .25rem; 
+    border-bottom-left-radius: .25rem;
+}    
+
+.sideimg article{
+    text-align: center;    margin: 100px;
+    margin-top: 100px;
+    padding: 50px;
+    font-size: 20px;
+}
+.sideimg article h1 {
+padding-top: 50px;
+font-size: 40px;
+color:rgba(44, 3, 3, 0.568)
+
+}
