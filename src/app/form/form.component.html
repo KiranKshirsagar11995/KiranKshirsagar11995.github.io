@@ -48,19 +48,28 @@
         </div>
         <div class="form col-4">
             <br><br><br><br>
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="loginForm">
                 <div class="form-outline ">
                     <h4 class="rounded-pill">LOGIN / REGISTER</h4><br>
                     <input type="text" id="form2Example11" class="form-control"
-                        placeholder="Phone number or email address" formControlName="mobileNumber" />
-                    <label class="form-label" for="form2Example11"></label>
+                        placeholder="Phone number or email address" formControlName="username" />
 
-                </div>
+                    <label class="form-label" for="form2Example11"></label>
+                    <span style="color: rgb(247, 212, 15)"
+                        *ngIf="username && username.invalid && username.touched">Please Enter
+                        Mobile
+                        Number/Email</span>
+
+                </div><br>
 
                 <div class="form-outline ">
-                    <input type="password" id="form2Example22" class="form-control" placeholder="Password"
+                    <input type="password" id="form2Example22" class="form-control" placeholder="password"
                         formControlName="password" />
                     <label class="form-label" for="form2Example22"></label>
+                    <span style="color: rgb(247, 212, 15);"
+                        *ngIf="password && password.invalid && password.touched">Please Enter
+                        Password(It should be 8 characters)
+                    </span><br>
 
                 </div>
 

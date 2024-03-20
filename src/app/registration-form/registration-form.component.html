@@ -7,39 +7,272 @@
                         <div class="sideimg col-xl-6 d-none d-xl-block">
 
                             <article>
-                                <img src="./assets/regwomen.jpg" alt="About 1" width="200" height="150">
+                                <h1>Welcome </h1><br><br>
 
-                                <h1>Welcome </h1>
 
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni eos, sequi commodi
-                                    officiis itaque dignissimos consectetur beatae! Inventore, dolorem. Facilis vero
-                                    porro,
-                                    incidunt quisquam dolore alias numquam aliquam possimus non.</p>
+                                <img src="./assets/regwomen.jpg" alt="About 1" width="400" height="500">
+                                <br><br>
+
+                                <p>"The future belongs to those who believe in the beauty of their dreams. Dare to
+                                    dream, and pursue your vision with determination." - Eleanor Roosevelt</p>
 
                             </article>
                         </div>
                         <div class="col-xl-6">
                             <div class="card-body p-md-5 text-black">
-                                <h3 class="mb-5 text-uppercase">Student registration form</h3>
-                                <ng-container *ngIf="currentStep === 1">
-                                    <div class="row">
+                                <form [formGroup]="registrationForm">
+                                    <h3 class="mb-5 text-uppercase">Student registration form</h3>
+                                    <ng-container *ngIf="currentStep === 1">
                                         <div class="row">
-                                            <p
-                                                style="font-size:20px; font: weight 1%;background-color:rgb(204, 197, 197);border-radius:50px ;padding: 10px;">
-                                                Personal Details:
-                                            </p>
+                                            <div class="row">
+                                                <p
+                                                    style="font-size:20px; font: weight 1%;background-color:rgb(204, 197, 197);border-radius:50px ;padding: 10px;">
+                                                    Personal Details:
+                                                </p>
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-outline">
+                                                        <input type="text" id="form3Example1m"
+                                                            class="form-control form-control-lg"
+                                                            formControlName="fname" />
+                                                        <label class="form-label" for="form3Example1m">First
+                                                            name</label><br>
+                                                        <span style="color: rgb(189, 40, 14)"
+                                                            *ngIf="registrationForm.get('fname')?.invalid && registrationForm.get('fname')?.touched">Please
+                                                            Enter
+                                                            First Name</span>
+                                                    </div>
+                                                </div>
+                                                <div class=" col-md-6 mb-4">
+                                                    <div class="form-outline">
+                                                        <input type="text" id="form3Example1n"
+                                                            class="form-control form-control-lg"
+                                                            formControlName="lastname" />
+                                                        <label class="form-label" for="form3Example1n">Last
+                                                            name</label><br>
+                                                        <span style="color: rgb(189, 40, 14)"
+                                                            *ngIf="registrationForm.get('lastname')?.invalid && registrationForm.get('lastname')?.touched">Please
+                                                            Enter
+                                                            Last Name</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-outline">
+                                                        <input type="text" id="form3Example1m1"
+                                                            class="form-control form-control-lg"
+                                                            formControlName="mothername" />
+                                                        <label class="form-label" for="form3Example1m1">Mother's
+                                                            name</label><br>
+                                                        <span style="color: rgb(189, 40, 14)"
+                                                            *ngIf="registrationForm.get('mothername')?.invalid && registrationForm.get('mothername')?.touched">Please
+                                                            Enter
+                                                            Mother Name</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-outline">
+                                                        <input type="text" id="form3Example1n1"
+                                                            class="form-control form-control-lg"
+                                                            formControlName="fathername" />
+                                                        <label class="form-label" for="form3Example1n1">Father's
+                                                            name</label><br>
+                                                        <span style="color: rgb(189, 40, 14)"
+                                                            *ngIf="registrationForm.get('fathername')?.invalid && registrationForm.get('fathername')?.touched">Please
+                                                            Enter
+                                                            Father Name</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-outline">
+                                                        <input type="text" id="form3Example1m1"
+                                                            class="form-control form-control-lg"
+                                                            formControlName="statename" />
+                                                        <label class="form-label"
+                                                            for="form3Example1m1">State</label><br>
+                                                        <span style="color: rgb(189, 40, 14)"
+                                                            *ngIf="registrationForm.get('statename')?.invalid && registrationForm.get('statename')?.touched">Please
+                                                            Enter
+                                                            state Name</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-outline">
+                                                        <input type="text" id="form3Example1n1"
+                                                            class="form-control form-control-lg"
+                                                            formControlName="cityname" />
+                                                        <label class="form-label" for="form3Example1n1">City</label><br>
+                                                        <span style="color: rgb(189, 40, 14)"
+                                                            *ngIf="registrationForm.get('cityname')?.invalid && registrationForm.get('cityname')?.touched">Please
+                                                            Enter
+                                                            ciry Name</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-outline">
+                                                        <input type="text" id="form3Example1m1"
+                                                            class="form-control form-control-lg"
+                                                            formControlName="mobileNo" />
+                                                        <label class="form-label" for="form3Example1m1">Mobile
+                                                            No.</label><br>
+                                                        <span style="color: rgb(189, 40, 14)"
+                                                            *ngIf="registrationForm.get('mobileNo')?.invalid && registrationForm.get('mobileNo')?.touched">Please
+                                                            Enter
+                                                            mobile number</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-outline">
+                                                        <input type="text" id="form3Example1n1"
+                                                            class="form-control form-control-lg" />
+                                                        <label class="form-label" for="form3Example1n1">Alt
+                                                            Mb.No.(Optional)</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-outline mb-4">
+                                                <input type="text" id="form3Example8"
+                                                    class="form-control form-control-lg" formControlName="address" />
+                                                <label class="form-label" for="form3Example8">Address</label><br>
+                                                <span style="color: rgb(189, 40, 14)"
+                                                    *ngIf="registrationForm.get('address')?.invalid && registrationForm.get('address')?.touched">Please
+                                                    Enter
+                                                    Address </span>
+                                            </div>
+
+
+
+                                            <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+                                                <h6 class="mb-0 me-4">Gender: </h6>
+
+
+                                                <div class="form-check form-check-inline mb-0 me-4">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="femaleGender" value="option1"
+                                                        formControlName="gender" />
+                                                    <label class="form-check-label" for="femaleGender">Female</label>
+                                                </div>
+
+                                                <div class="form-check form-check-inline mb-0 me-4">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="maleGender" value="option2"
+                                                        formControlName="gender" />
+                                                    <label class="form-check-label" for="maleGender">Male</label>
+                                                </div>
+
+
+
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6 mb-4">
+
+                                                    <div class="dropdown">
+                                                        <label for="">Select courses here:</label>
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                            id="dropdownMenu2" data-toggle="dropdown"
+                                                            aria-haspopup="true" aria-expanded="false">
+                                                            COURSE
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                                            <button class="dropdown-item" type="button">sewing Art/
+                                                                शिवणकला</button>
+                                                            <button class="dropdown-item" type="button">Beauty
+                                                                Parlour/
+                                                                सौंदर्य
+                                                                प्रसाधन
+                                                            </button>
+                                                            <button class="dropdown-item"
+                                                                type="button">Pre-primary</button>
+                                                            <button class="dropdown-item"
+                                                                type="button">Montesory/माँटेसरी</button>
+                                                            <button class="dropdown-item"
+                                                                type="button">Handcraft/हस्तकला</button>
+                                                            <button class="dropdown-item"
+                                                                type="button">Drawing/रेखाचित्र</button>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-outline mb-4">
+                                                <input type="text" id="form3Example9"
+                                                    class="form-control form-control-lg" placeholder="dd/mm/yy"
+                                                    formControlName="dob" />
+                                                <label class="form-label" for="form3Example9">DOB</label><br>
+                                                <span style="color: rgb(189, 40, 14)"
+                                                    *ngIf="registrationForm.get('dob')?.invalid && registrationForm.get('dob')?.touched">Please
+                                                    Enter
+                                                    Date of birth </span>
+                                            </div>
+
+                                            <div class="form-outline mb-4">
+                                                <input type="text" id="form3Example90"
+                                                    class="form-control form-control-lg" formControlName="pincode" />
+                                                <label class="form-label" for="form3Example90">Pincode</label><br>
+                                                <span style="color: rgb(189, 40, 14)"
+                                                    *ngIf="registrationForm.get('pincode')?.invalid && registrationForm.get('pincode')?.touched">Please
+                                                    Enter
+                                                    pincode </span>
+                                            </div>
+
+                                            <div class="form-outline mb-4">
+                                                <input type="text" id="form3Example97"
+                                                    class="form-control form-control-lg" />
+                                                <label class="form-label" for="form3Example97">Email ID</label>
+
+                                            </div>
+
+
+
+
+
+                                            <!-- <div class="d-flex justify-content-end pt-3">
+                                        <button type="button" class="btn btn-dark btn-lg">Reset all</button>
+                                        <button type="button" class="btn btn-success btn-lg ms-2">Next</button>
+
+                                    </div> -->
+                                        </div>
+                                    </ng-container>
+
+                                    <ng-container *ngIf="currentStep === 2">
+                                        <p
+                                            style="font-size:20px; font: weight 1%;background-color:rgb(204, 197, 197);border-radius:50px ;padding: 10px;">
+                                            Education Details :-
+                                        </p><br>
+                                        <div class="row">
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
                                                     <input type="text" id="form3Example1m"
-                                                        class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Example1m">First name</label>
+                                                        class="form-control form-control-lg" formControlName="course" />
+                                                    <label class="form-label"
+                                                        for="form3Example1m">Course/Degree</label><br>
+                                                    <span style="color: rgb(189, 40, 14)"
+                                                        *ngIf="registrationForm.get('course')?.invalid && registrationForm.get('course')?.touched">Please
+                                                        Enter
+                                                        course </span>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
                                                     <input type="text" id="form3Example1n"
-                                                        class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Example1n">Last name</label>
+                                                        class="form-control form-control-lg" formControlName="school" />
+                                                    <label class="form-label"
+                                                        for="form3Example1n">School/University</label><br>
+                                                    <span style="color: rgb(189, 40, 14)"
+                                                        *ngIf="registrationForm.get('school')?.invalid && registrationForm.get('school')?.touched">Please
+                                                        Enter
+                                                        school </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -48,197 +281,52 @@
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
                                                     <input type="text" id="form3Example1m1"
-                                                        class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Example1m1">Mother's
-                                                        name</label>
+                                                        class="form-control form-control-lg" formControlName="marks" />
+                                                    <label class="form-label"
+                                                        for="form3Example1m1">Marks/grade</label><br>
+                                                    <span style="color: rgb(189, 40, 14)"
+                                                        *ngIf="registrationForm.get('marks')?.invalid && registrationForm.get('marks')?.touched">Please
+                                                        Enter
+                                                        marks </span>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
                                                     <input type="text" id="form3Example1n1"
-                                                        class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Example1n1">Father's
-                                                        name</label>
+                                                        class="form-control form-control-lg" formControlName="year" />
+                                                    <label class="form-label" for="form3Example1n1">Year
+                                                    </label><br>
+                                                    <span style="color: rgb(189, 40, 14)"
+                                                        *ngIf="registrationForm.get('year')?.invalid && registrationForm.get('year')?.touched">Please
+                                                        Enter
+                                                        year </span>
                                                 </div>
                                             </div>
                                         </div>
+                                        <hr>
                                         <div class="row">
-                                            <div class="col-md-6 mb-4">
-                                                <div class="form-outline">
-                                                    <input type="text" id="form3Example1m1"
-                                                        class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Example1m1">State</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mb-4">
-                                                <div class="form-outline">
-                                                    <input type="text" id="form3Example1n1"
-                                                        class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Example1n1">City</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6 mb-4">
-                                                <div class="form-outline">
-                                                    <input type="text" id="form3Example1m1"
-                                                        class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Example1m1">Mobile No.</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mb-4">
-                                                <div class="form-outline">
-                                                    <input type="text" id="form3Example1n1"
-                                                        class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Example1n1">Alt
-                                                        Mb.No.(Optional)</label>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="form-outline mb-4">
-                                            <input type="text" id="form3Example8"
-                                                class="form-control form-control-lg" />
-                                            <label class="form-label" for="form3Example8">Address</label>
-                                        </div>
+                                            <p
+                                                style="font-size:20px; font: weight 1%;background-color:rgb(204, 197, 197);border-radius:50px ;padding: 10px;">
+                                                Higher Education (Optional) :-
+                                            </p>
 
-
-
-                                        <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
-
-                                            <h6 class="mb-0 me-4">Gender: </h6>
-
-                                            <div class="form-check form-check-inline mb-0 me-4">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                    id="femaleGender" value="option1" />
-                                                <label class="form-check-label" for="femaleGender">Female</label>
-                                            </div>
-
-                                            <div class="form-check form-check-inline mb-0 me-4">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                    id="maleGender" value="option2" />
-                                                <label class="form-check-label" for="maleGender">Male</label>
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-6 mb-4">
-
-                                                <div class="dropdown">
-                                                    <label for="">Select courses here:</label>
-                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                                        id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
-                                                        COURSE
-                                                    </button>
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                                        <button class="dropdown-item" type="button">sewing Art/
-                                                            शिवणकला</button>
-                                                        <button class="dropdown-item" type="button">Beauty Parlour/
-                                                            सौंदर्य
-                                                            प्रसाधन
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">Pre-primary</button>
-                                                        <button class="dropdown-item"
-                                                            type="button">Montesory/माँटेसरी</button>
-                                                        <button class="dropdown-item"
-                                                            type="button">Handcraft/हस्तकला</button>
-                                                        <button class="dropdown-item"
-                                                            type="button">Drawing/रेखाचित्र</button>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-outline">
+                                                        <input type="text" id="form3Example1m"
+                                                            class="form-control form-control-lg" />
+                                                        <label class="form-label"
+                                                            for="form3Example1m">Course/Degree</label>
                                                     </div>
                                                 </div>
-
-
-                                            </div>
-
-                                        </div>
-
-                                        <div class="form-outline mb-4">
-                                            <input type="text" id="form3Example9" class="form-control form-control-lg"
-                                                placeholder="dd/mm/yy" />
-                                            <label class="form-label" for="form3Example9">DOB</label>
-                                        </div>
-
-                                        <div class="form-outline mb-4">
-                                            <input type="text" id="form3Example90"
-                                                class="form-control form-control-lg" />
-                                            <label class="form-label" for="form3Example90">Pincode</label>
-                                        </div>
-
-                                        <div class="form-outline mb-4">
-                                            <input type="text" id="form3Example97"
-                                                class="form-control form-control-lg" />
-                                            <label class="form-label" for="form3Example97">Email ID</label>
-                                        </div>
-
-
-
-
-
-                                        <!-- <div class="d-flex justify-content-end pt-3">
-                                        <button type="button" class="btn btn-dark btn-lg">Reset all</button>
-                                        <button type="button" class="btn btn-success btn-lg ms-2">Next</button>
-
-                                    </div> -->
-                                    </div>
-                                </ng-container>
-
-                                <ng-container *ngIf="currentStep === 2">
-                                    <p
-                                        style="font-size:20px; font: weight 1%;background-color:rgb(204, 197, 197);border-radius:50px ;padding: 10px;">
-                                        Education Details :-
-                                    </p><br>
-                                    <div class="row">
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <input type="text" id="form3Example1m"
-                                                    class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3Example1m">Course/Degree</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <input type="text" id="form3Example1n"
-                                                    class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3Example1n">School/University</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <input type="text" id="form3Example1m1"
-                                                    class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3Example1m1">Marks/grade</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <input type="text" id="form3Example1n1"
-                                                    class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3Example1n1">Year
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row">
-
-                                        <p
-                                            style="font-size:20px; font: weight 1%;background-color:rgb(204, 197, 197);border-radius:50px ;padding: 10px;">
-                                            Higher Education (Optional) :-
-                                        </p>
-
-                                        <div class="row">
-                                            <div class="col-md-6 mb-4">
-                                                <div class="form-outline">
-                                                    <input type="text" id="form3Example1m"
-                                                        class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Example1m">Course/Degree</label>
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-outline">
+                                                        <input type="text" id="form3Example1n"
+                                                            class="form-control form-control-lg" />
+                                                        <label class="form-label"
+                                                            for="form3Example1n">School/University</label>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-4">
@@ -249,113 +337,125 @@
                                                         for="form3Example1n">School/University</label>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <input type="text" id="form3Example1n"
-                                                    class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3Example1n">School/University</label>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <input type="text" id="form3Example1m1"
+                                                        class="form-control form-control-lg" />
+                                                    <label class="form-label" for="form3Example1m1">Marks/grade</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <input type="text" id="form3Example1n1"
+                                                        class="form-control form-control-lg" />
+                                                    <label class="form-label" for="form3Example1n1">Year
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <input type="text" id="form3Example1m1"
-                                                    class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3Example1m1">Marks/grade</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <input type="text" id="form3Example1n1"
-                                                    class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3Example1n1">Year
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </ng-container>
+                                    </ng-container>
 
-                                <ng-container *ngIf="currentStep === 3">
+                                    <ng-container *ngIf="currentStep === 3">
 
 
-                                    <div class="row">
-                                        <p
-                                            style="font-size:20px; font: weight 1%;background-color:rgb(204, 197, 197);border-radius:50px ;padding: 10px;">
-                                            Required Documents :-
-                                        </p>
-                                        <!-- Step 2 form fields go here -->
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <label class="form-label" for="fileInput">School Tc :</label>
-                                                <input type="file" id="fileInput" class="form-control form-control-lg"
-                                                    (change)="onFileSelected($event)" />
+                                        <div class="row">
+                                            <p
+                                                style="font-size:20px; font: weight 1%;background-color:rgb(204, 197, 197);border-radius:50px ;padding: 10px;">
+                                                Required Documents :-
+                                            </p>
+                                            <!-- Step 2 form fields go here -->
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <label class="form-label" for="fileInput">School Tc :</label>
+                                                    <input type="file" id="fileInput"
+                                                        class="form-control form-control-lg"
+                                                        (change)="onFileSelected($event)" formControlName="schoolTc" />
+                                                    <span style="color: rgb(189, 40, 14)"
+                                                        *ngIf="registrationForm.get('schoolTc')?.invalid && registrationForm.get('schoolTc')?.touched">Please
+                                                        Enter
+                                                        schoolTc </span>
+                                                </div>
 
                                             </div>
 
+
+
                                         </div>
+                                        <div class="row">
 
+                                            <!-- Step 2 form fields go here -->
 
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <label class="form-label" for="fileInput">Adhar Card :</label>
+                                                    <input type="file" id="fileInput"
+                                                        class="form-control form-control-lg"
+                                                        (change)="onFileSelected($event)" formControlName="adharcard" />
+                                                    <span style="color: rgb(189, 40, 14)"
+                                                        *ngIf="registrationForm.get('adharcard')?.invalid && registrationForm.get('adharcard')?.touched">Please
+                                                        Upload document here
+                                                    </span>
 
-                                    </div>
-                                    <div class="row">
-
-                                        <!-- Step 2 form fields go here -->
-
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <label class="form-label" for="fileInput">Adhar Card :</label>
-                                                <input type="file" id="fileInput" class="form-control form-control-lg"
-                                                    (change)="onFileSelected($event)" />
+                                                </div>
 
                                             </div>
 
+
                                         </div>
+                                        <div class="row">
 
+                                            <!-- Step 2 form fields go here -->
 
-                                    </div>
-                                    <div class="row">
-
-                                        <!-- Step 2 form fields go here -->
-
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <label class="form-label" for="fileInput">Election Card :</label>
-                                                <input type="file" id="fileInput" class="form-control form-control-lg"
-                                                    (change)="onFileSelected($event)" />
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <label class="form-label" for="fileInput">Election Card :</label>
+                                                    <input type="file" id="fileInput"
+                                                        class="form-control form-control-lg"
+                                                        (change)="onFileSelected($event)"
+                                                        formControlName="electioncard" />
+                                                    <span style="color: rgb(189, 40, 14)"
+                                                        *ngIf="registrationForm.get('adharcard')?.invalid && registrationForm.get('adharcard')?.touched">Please
+                                                        upload Document here
+                                                    </span>
+                                                </div>
 
                                             </div>
 
+
                                         </div>
+                                        <div class="row">
 
 
-                                    </div>
-                                    <div class="row">
-
-
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <label class="form-label" for="fileInput">Passport Photo :</label>
-                                                <input type="file" id="fileInput" class="form-control form-control-lg"
-                                                    (change)="onFileSelected($event)" />
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <label class="form-label" for="fileInput">Passport Photo :</label>
+                                                    <input type="file" id="fileInput"
+                                                        class="form-control form-control-lg"
+                                                        (change)="onFileSelected($event)" formControlName="passport" />
+                                                    <span style="color: rgb(189, 40, 14)"
+                                                        *ngIf="registrationForm.get('passport')?.invalid && registrationForm.get('passport')?.touched">Please
+                                                        upload Document here
+                                                    </span>
+                                                </div>
 
                                             </div>
 
+
                                         </div>
+                                    </ng-container>
+                                    <div class="d-flex justify-content-end pt-3">
 
-
-                                    </div>
-                                </ng-container>
-                                <div class="d-flex justify-content-end pt-3">
-
-                                    <!-- <button type="button" class="btn btn-dark btn-lg" (click)="resetForm()">Reset
+                                        <!-- <button type="button" class="btn btn-dark btn-lg" (click)="resetForm()">Reset
                                         all</button> -->
-                                    <button type="button" class="btn btn-dark btn-lg" *ngIf="currentStep !== 1"
-                                        (click)="prevStep()">Previous</button>
-                                    <button type="button" class="btn btn-primary btn-lg ms-2" *ngIf="currentStep !== 3"
-                                        (click)="nextStep()">Next</button>
-                                    <button type="button" class="btn btn-success btn-lg ms-2" *ngIf="currentStep === 3"
-                                        (click)="submitForm()">Submit</button>
-                                </div>
+                                        <button type="button" class="btn btn-dark btn-lg" *ngIf="currentStep !== 1"
+                                            (click)="prevStep()">Previous</button>
+                                        <button type="button" class="btn btn-primary btn-lg ms-2"
+                                            *ngIf="currentStep !== 3" (click)="nextStep()">Next</button>
+                                        <button type="button" class="btn btn-success btn-lg ms-2"
+                                            *ngIf="currentStep === 3" [disabled]="registrationForm.invalid"
+                                            (click)="submitForm()">Submit</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

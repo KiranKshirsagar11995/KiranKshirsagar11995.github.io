@@ -17,20 +17,20 @@ export class FormComponent implements OnInit {
 
   createLoginForm() {
     this.loginForm = this.fb.group({
-      username: ['', [Validators.required, this.mobileValidator]],
-      password: ['', Validators.required]
+      username: ['', [Validators.required, Validators.pattern('[0-9]+$')]],
+      password: ['', [Validators.required, Validators.minLength(8)]]
     });
   }
-  mobileValidator(control: any) {
-    const mobileNumberRegex = /^[0-9]{10}$/; // Change this regex according to your requirements
-    return mobileNumberRegex.test(control.value) ? null : { invalidMobile: true };
 
+
+  get username() {
+    return this.loginForm.get('username');
   }
 
-  get f() {
-    return this.loginForm.controls;
-  }
 
+  get password() {
+    return this.loginForm.get('password');
+  }
   // Getter for easy access to form fields
 
   onSubmit() {
